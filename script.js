@@ -32,12 +32,12 @@ function MultiplyBy2(arr){
 numArray().then((arr)=>filterOdd(arr))
 .then((evenArr)=>{
     
-	output.textContent = evenArr;
+	output.innerHTML=`${evenArr} <br>`
 	
 	return MultiplyBy2(evenArr);
 }).then((newArr)=>{
 	console.log(newArr)
-	// output.textContent += newArr;
+	output.innerHTML += `${newArr}`;
 })
 
 
